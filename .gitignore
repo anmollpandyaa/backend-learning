@@ -1,2 +1,2 @@
 .env
-constants.js
+src/constants.js
