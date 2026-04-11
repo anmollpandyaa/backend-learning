@@ -22,3 +22,9 @@ npm init
 - Always wrap code involving database communication inside try-catch because we often encounter errors, also make the function async
 - Holding connection statement in a variable is good practice
 - mongoose.connect returns an object called connection, contains various things like host and port
+
+## How to import dotenv using module syntax?
+
+- Import using regular syntax
+- Configure using dotenv.config({})
+- add this statement in dev script: -r dotenv/config --experimental-json-modules
