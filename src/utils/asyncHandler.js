@@ -23,4 +23,4 @@ const asyncHandler = (functionName) => {async(req, res, next) => {
 }}
 */
 
-export { asyncHandler }
+export {asyncHandler}
