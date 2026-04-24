@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
-import { LIMIT } from "./constants"
+import { LIMIT } from "./constants.js"
 
 const app = express()
 
@@ -12,6 +12,6 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 import { router } from "./routes/user.route.js"
-app.use("/users", router)
+app.use("/api//users", router)
 
 export {app}
