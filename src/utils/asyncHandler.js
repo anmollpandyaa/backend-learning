@@ -2,7 +2,7 @@ const asyncHandler = (requestHandler) => {
     return (req, res, next) => {
         Promise
             .resolve(requestHandler(req, res, next))
-            .reject({
+            .catch({
                 success: false,
                 message: "cannot handle async function"
             })
