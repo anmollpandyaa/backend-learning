@@ -14,4 +14,4 @@ app.use(cookieParser())
 import { router } from "./routes/user.route.js"
 app.use("/api/users", router)
 
-export {app}
+export { app }
