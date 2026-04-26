@@ -39,8 +39,8 @@ const registerUser = asyncHandler(async (req, res) => {
     // create an object after getting data and put into db
     const user = await User.create({
         fullName,
-        avatar: avatar.url,
-        coverImage: coverImage.url || "", // keep empty if does not exist
+        avatar: avatarUploaded.url,
+        coverImage: coverImageUploaded.url || "", // keep empty if does not exist
         username: username.toLowerCase(),
         email,
         password
@@ -54,7 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 
     return res.status(201).json(
-        new ApiResponse(200, userCreated, "user registered successfully")
+        new ApiResponse(200, "user registered successfully", userCreated)
     )
 })
 
